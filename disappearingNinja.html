@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>disapearing ninja</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<style type="text/css">
+
+		body {
+			margin: 10px;
+			padding: 10px;
+			outline: 1px solid pink;
+		}
+		.header {
+			height: 50px;
+		}
+		.header h2, h4 {
+			display: inline-block
+		}
+		.content {
+			height: 600px;
+		}
+		.bottom {
+			height: 50px;
+		}
+
+		.content img{
+			display: inline-block;
+			width: 300px;
+			height: 300px;
+
+		}
+
+	</style>
+
+	<script>
+		$(document).ready(function() {
+	   	console.log('ready!')
+	       // your jquery codes here
+	       $('img').click(function(){ 
+	       	console.log('clicked!!!!!!')
+	       	$(this).fadeOut('slow');
+	       });
+	       $('.btn').click(function(){ 
+	       	console.log('clicked!!!!!!')
+	       	$('img').show();
+	       });
+
+	   });
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>jQuery -</h2>
+			<h4>assignment 1</h4>
+		</div>
+		<div class="content">
+			<img class="1" src="ninja.jpg">
+			<img class="2" src="ninja.jpg">
+			<img class="3" src="ninja.jpg">
+			<img class="4" src="ninja.jpg">
+			<img class="5" src="ninja.jpg">
+			<img class="6" src="ninja.jpg">
+			<img class="7" src="ninja.jpg">
+			<img class="8" src="ninja.jpg">
+		</div>
+		<div class="bottom">
+			<button class="btn">Restore</button>
+		</div>
+		
+	</div>
+
+</body>
+</html>
